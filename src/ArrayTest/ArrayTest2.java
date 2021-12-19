@@ -1,6 +1,6 @@
 package ArrayTest;
 
-public class Practice2 {
+public class ArrayTest2 {
     public static void main(String[] args) {
         // 1차원 배열에서, 문자 M을 가지고 있는 아이템의 수를 출력해보기
         // 배열.length : 배열에 들어있는 아이템 갯수

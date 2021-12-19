@@ -1,6 +1,6 @@
 package ArrayTest;
 
-public class Practice1 {
+public class ArrayTest1 {
     public static void main(String[] args) {
         // 3차원 배열에서 8, 10, 2를 순서대로 각각 라인에 출력
         // System.out.println() 사용
