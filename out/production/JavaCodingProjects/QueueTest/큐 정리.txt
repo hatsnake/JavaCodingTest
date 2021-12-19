@@ -1,0 +1,33 @@
+자료구조
+1. 큐(Queue)
+줄을 서는 행위와 유사
+가장 먼저 넣은 데이터를 가장 먼저 꺼낼 수 있는 구조
+FIFO(First-in, First-out) 또는 LILO(Last-in, Last-out) 방식으로
+스택과 꺼내는 순서가 반대
+
+※ 용어
+Enqueue : 큐에 데이터를 넣는 기능, add(value) 또는 offer(value) 메소드 제공
+Dequeue : 큐에서 데이터를 꺼내는 기능, poll() 또는 remove() 메소드 제공
+Queue 클래스에 데이터 생성을 위해서는 LinkedList 클래스를 사용해야 한다.
+
+※ 큐 선언
+import java.util.LinkedList;
+import java.util.Queue;
+
+Queue<Integer> queue_int = new LinkedList<Integer>();
+Queue<String> queue_str = new LinkedList<String>();
+
+※ 큐 삽입
+queue_int.add(1);
+queue_int.offer(2); // true (offer의 리턴값)
+System.out.println(queue_int); // [1, 2]
+
+※ 큐 삭제
+queue_int.poll(); // 1 (큐의 첫번째 값 반환, 해당 값은 큐에서 삭제)
+queue_int.remove(); // 2 (큐의 첫번째 값 반환, 해당 값은 큐에서 삭제)
+System.out.println(queue_int); // []
+
+※ 참고 : 어디에 큐가 많이 쓰일까?
+멀티 태스킹을 위한 프로세스 스케쥴링 방식을 구현하기 위해 많이 사용됨 (운영체제 참조)
+큐의 경우에는 장단점 보다는, 큐의 활용 예로 프로세스 스케쥴링 방식을 함께 이해하는 것이 좋음
+

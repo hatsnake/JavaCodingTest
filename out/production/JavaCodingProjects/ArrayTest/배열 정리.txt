@@ -1,0 +1,73 @@
+자료구조
+
+1. 배열(Array)
+같은 종류의 데이터를 효율적관리 및 순차적저장
+장점 : 인덱스 번호를 통해 첫 데이터의 위치에서 상대적인 위치로 데이터 접근
+단점 : 데이터 추가/삭제의 어려움 (미리 최대 길이를 지정해야 함)
+
+※ 참고 : Primitive 자료형과 Wrapper 클래스 (int와 Integer)
+Wrapper 클래스의 장점 :
+null을 용이하게 처리할 수 있음.
+ArrayList등 객체만을 핸들링 하는 기능을 사용하기 위해서
+
+※ 배열 생성
+Integer[] data_list = new Integer[10];
+data_list[0] = 1;
+
+Integer[] data_list = {5, 4, 3, 2, 1};
+
+※ 배열 출력
+System.out.println(data_list[0]);
+
+import java.util.Arrays;
+System.out.println(Arrays.toString(data_list));
+
+※ 2차원 배열
+Integer[][] data_list = {{1, 2, 3}, {4, 5, 6}};
+
+※ 3차원 배열
+Integer[][][] data_list = {
+  {
+    {1, 2, 3},
+    {4, 5, 6}
+  },
+  {
+    {7, 8, 9},
+    {10, 11, 12}
+  }
+};
+
+---------------------------------------------------
+
+2. ArrayList 클래스
+가변 길이의 배열 자료구조를 다룰 수 있는 기능을 제공함.
+
+※ 참고 : List와 ArrayList 선언의 차이점
+// List는 인터페이스, ArrayList는 클래스
+List<Integer> list1 = new ArrayList<Integer>();
+
+ArrayList<Integer> list1 = new ArrayList<Integer>();
+
+// ArrayList와 LinkedList는 List 인터페이스를 상속받아 구현하였기 때문에
+// 도중에 다른 리스트 클래스를 쓸 수 있는 구현상의 유연성을 제공한다.
+List<Integer> list1 = new ArrayList<Integer>();
+list1 = new LinkedList<Integer>();
+
+※ ArrayList 선언
+ArrayList<Integer> list1 = new ArrayList<Integer>();
+
+※ ArrayList 추가
+list1.add(1);
+list1.add(2);
+list1.get(0); // 1
+
+※ ArrayList 변경
+list1.set(0,5);
+list1.get(0); // 5
+
+※ ArrayList 삭제
+list1.remove(0);
+list1.get(0); // 2 (1번째 인덱스가 0번째 인덱스로 땡겨짐)
+
+※ ArrayList 길이
+list1.size();
