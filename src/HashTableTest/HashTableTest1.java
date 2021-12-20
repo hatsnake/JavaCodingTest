@@ -41,7 +41,18 @@ public class HashTableTest1 {
         HashTableTest1 ht = new HashTableTest1(20);
         ht.saveData("DaveLee", "01022223333");
         ht.saveData("fun-coding", "01033334444");
+        ht.saveData("Dave", "01055556666");
+        ht.saveData("DavePark", "01077778888");
 
+        // 충돌을 피하는 방법중 하나
+        String name = "Dave";
+        int key = 0;
+        for(int i=0; i<name.length(); i++) {
+            key += name.charAt(i);
+        }
+        System.out.println((int)(key) % 200);
+
+        // 키의 앞자리를 통해 해쉬값을 계산하기 때문에 충돌이 발생한다.
         String getResult = ht.getData("DaveLee");
         System.out.println(getResult);
     }
