@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 // 랜덤 숫자
+// ※ 왜 dataList.size() - 1를 하는지 모르겠음..
 public class BubbleSortTest4 {
     public ArrayList<Integer> sort(ArrayList<Integer> dataList) {
         for(int i = 0; i < dataList.size() - 1; i++) {
