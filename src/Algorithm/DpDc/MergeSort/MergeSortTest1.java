@@ -3,7 +3,7 @@ package Algorithm.DpDc.MergeSort;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class MergeTest1 {
+public class MergeSortTest1 {
     public void splitFunc(ArrayList<Integer> dataList) {
         if(dataList.size() <= 1) {
             return;
@@ -27,7 +27,7 @@ public class MergeTest1 {
             dataList.add((int)(Math.random()*100));
         }
 
-        MergeTest1 mt = new MergeTest1();
+        MergeSortTest1 mt = new MergeSortTest1();
         // 랜덤 배열
         mt.splitFunc(dataList);
         // asList 배열

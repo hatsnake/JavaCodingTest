@@ -1,9 +1,8 @@
 package Algorithm.DpDc.MergeSort;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
-public class MergeTest2 {
+public class MergeSortTest2 {
     public ArrayList<Integer> mergeSplitFunc(ArrayList<Integer> dataList) {
         if(dataList.size() <= 1) {
             return dataList;
@@ -57,7 +56,7 @@ public class MergeTest2 {
             testData.add((int)(Math.random()*100));
         }
 
-        MergeTest2 mt = new MergeTest2();
+        MergeSortTest2 mt = new MergeSortTest2();
         ArrayList<Integer> dataSort = mt.mergeSplitFunc(testData);
         System.out.println(dataSort);
     }
