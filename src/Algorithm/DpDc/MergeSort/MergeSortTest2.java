@@ -35,7 +35,7 @@ public class MergeSortTest2 {
             }
         }
 
-        // CASE2 : right 데이터가 없을 때
+        // CASE2 : right 데이터가 없을 때 (Q. 근데 왜 오른쪽은 부등호 표시 안할까?)
         while(leftList.size() > leftPoint) {
             mergedList.add(leftList.get(leftPoint));
             leftPoint += 1;
