@@ -1,0 +1,41 @@
+v알고리즘
+1. 너비 우선 탐색(Breath-First Search)
+정점들과 같은 레벨에 있는 노드들(형제 노드들)을 먼저 탐색하는 방식
+
+[needVisit 큐]와 [visited 큐]의 를 활용
+
+2. 깊이 우선 탐색(Depth-First Search)
+정점의 자식들을 먼저 탐색하는 방식
+
+[needVisit 스택]과 [visited 큐]의 를 활용
+
+※ BFS, DFS의 시간복잡도 (동일)
+노드수 : V
+간선수 : E
+while needVisit는 V + E번 만큼 수행함
+시간복잡도는 O(V + E)
+
+※ BFS와 DFS, 대표적인 그래프 탐색 알고리즘
+너비우선탐색(Breadth First Search) : 정점들과 같은 레벨에 있는 노드들(형제 노드들)을 먼저 탐색하는 방식
+깊이우선탐색(Depth First Search) : 정점의 자식들을 먼저 탐색하는 방식
+
+※ HashMap CRUD
+// HashMap 생성,선언
+HashMap<String, Integer> mapData1 = new HashMap<String, Integer>();
+HashMap<String, Integer> mapData2 = new HashMap<String, Integer>(mapData1);
+HashMap<String, Integer> mapData3 = new HashMap<String, Integer>(10);
+HashMap<String, ArrayList<String>> mapData4 = new HashMap<String, ArrayList<String>>();
+
+// HashMap 데이터 추가
+mapData1.put("A", 1);
+mapData1.put("B", 2);
+
+// HashMap 데이터 읽기
+System.out.println(mapData1);
+System.out.println(mapData1.get("A"));
+
+// HashMap 데이터 수정
+mapData1.put("B", 3);
+
+// HashMap 데이터 삭제
+mapData1.remove("A");
