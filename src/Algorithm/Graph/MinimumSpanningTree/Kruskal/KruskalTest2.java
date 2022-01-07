@@ -1,11 +1,11 @@
-package Algorithm.Graph.MinimumSpanningTree;
+package Algorithm.Graph.MinimumSpanningTree.Kruskal;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 
-public class KruskalPathTest2 {
+public class KruskalTest2 {
     HashMap<String, String> parent = new HashMap<String, String>();
     HashMap<String, Integer> rank = new HashMap<String, Integer>();
 
@@ -85,7 +85,7 @@ public class KruskalPathTest2 {
         System.out.println("verties : \n" + verties);
         System.out.println("edges.toString() : \n" + edges.toString());
 
-        KruskalPathTest2 kpt = new KruskalPathTest2();
+        KruskalTest2 kpt = new KruskalTest2();
         ArrayList<Edge> result = kpt.kruskalFunc(verties, edges);
         System.out.println("result : \n" + result);
     }

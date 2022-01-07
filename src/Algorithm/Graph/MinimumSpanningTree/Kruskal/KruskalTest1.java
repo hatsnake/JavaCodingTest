@@ -1,11 +1,11 @@
-package Algorithm.Graph.MinimumSpanningTree;
+package Algorithm.Graph.MinimumSpanningTree.Kruskal;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 
-public class KruskalPathTest1 {
+public class KruskalTest1 {
 
     // Union-Find 알고리즘 메서드 작성
     HashMap<String, String> parent = new HashMap<String, String>();
@@ -83,25 +83,4 @@ public class KruskalPathTest1 {
         System.out.println(edges.toString());
     }
 
-}
-
-class Edge implements Comparable<Edge> {
-    public int weight;
-    public String nodeV;
-    public String nodeU;
-
-    public Edge(int weight, String nodeV, String nodeU) {
-        this.weight = weight;
-        this.nodeV = nodeV;
-        this.nodeU = nodeU;
-    }
-
-    public String toString() {
-        return "(" + this.weight + ", " + this.nodeV + ", " + this.nodeU + ")";
-    }
-
-    @Override
-    public int compareTo(Edge edge) {
-        return this.weight - edge.weight;
-    }
 }
