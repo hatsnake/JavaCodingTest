@@ -8,6 +8,7 @@ public class Node<T> {
         this.data = data;
     }
 
+    /*
     public static void main(String[] args) {
         Node<Integer> node1 = new Node<Integer>(1);
         Node<Integer> node2 = new Node<Integer>(2);
@@ -15,6 +16,7 @@ public class Node<T> {
         node1.next = node2; // 링크드 리스트에 데이터 추가
         Node head = node1; // 시작 데이터(헤드)
     }
+    */
 }
 
 

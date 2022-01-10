@@ -36,7 +36,7 @@ public class ArrayTest2 {
             "Emir, Mr. Farred Chehab",
             "Fortune, Mr. Charles Alexander",
             "Dwyer, Miss. Ellen",
-            "Todoroff, Mr. Lalio"
+            "Todoroff, r. Lalio"
         };
 
         // 출력
@@ -45,6 +45,7 @@ public class ArrayTest2 {
             if(dataset[item].indexOf("M") != -1) {
                 count++;
             } else {
+                // M이 들어가지 않는 아이템과 아이템의 인덱스
                 System.out.println("아이템 : " + dataset[item]
                                     + ", 인덱스 : " + dataset[item].indexOf("M"));
             }

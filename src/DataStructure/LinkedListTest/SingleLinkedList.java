@@ -1,33 +1,34 @@
 package DataStructure.LinkedListTest;
 
 public class SingleLinkedList<T> {
+    // 시작 위치(head)는 null
     public Node<T> head = null;
 
-    public class Node<T> {
-        T data;
-        Node<T> next = null;
-
-        public Node(T data) {
-            this.data = data;
-        }
-    }
-
+    // 마지막 위치에 노드 추가
     public void addNode(T data) {
         if(head == null) {
+            // head가 null이면 들어온 값을 head에 삽입한다.
             head = new Node<T>(data);
         } else {
+            // head를 기준으로 다음 데이터 주소가 null이 아니면
+            // node 위치를 이동하면서 마지막 노드로 이동한다.
             Node<T> node = this.head;
             while(node.next != null) {
                 node = node.next;
             }
+            // 마지막 노드 next에 들어온 값을 삽입한다.
             node.next = new Node<T>(data);
         }
     }
 
+    // 노드 전체 출력
     public void printAll() {
+        // 노드에 값이 있을 때
         if(head != null) {
+            // head 데이터를 출력하기
             Node<T> node = this.head;
             System.out.print(node.data + " → ");
+            // 다음 노드가 없을 때까지 다음 노드 데이터 반복 출력
             while(node.next != null) {
                 node = node.next;
                 System.out.print(node.data + " → ");
@@ -36,6 +37,7 @@ public class SingleLinkedList<T> {
         }
     }
 
+    // 특정 노드 찾기
     public Node<T> search(T data) {
         if(this.head == null) {
             return null;
@@ -52,6 +54,7 @@ public class SingleLinkedList<T> {
         }
     }
 
+    // 중간에 노드 추가 (특정 데이터 뒤에)
     public void addNodeInside(T data, T isData) {
         Node<T> searchedNode = this.search(isData);
 
@@ -64,6 +67,7 @@ public class SingleLinkedList<T> {
         }
     }
 
+    // 노드 삭제
     public boolean delNode(T isData) {
         if(this.head == null) {
             return false;
